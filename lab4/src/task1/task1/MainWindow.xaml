@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:task1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Canvas Name="MyCanvas">
+        <Button
+                Name="button"
+                Width="128"
+                Height="128"
+                Content="Button"
+                Canvas.Left="0"
+                Canvas.Top="0"
+                MouseEnter="button_MouseEnter"
+            />
+        <TextBox x:Name="MyTextBox" />
+    </Canvas>
 </Window>
