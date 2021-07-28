@@ -6,7 +6,137 @@
         xmlns:local="clr-namespace:task3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="ApplicationGrid">
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Change background color"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                >
+                    <MenuItem Header="Black" Background="Black"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Red" Background="Red"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Orange" Background="Orange"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Yellow" Background="Yellow"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Lime" Background="Lime"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Green" Background="Green"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Blue" Background="Blue"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="Violet" Background="Violet"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
+                    <MenuItem Header="White" Background="White"
+                        Click="MenuItem_GetBackgroundColor_setGridBackground"
+                        MouseEnter="ChangeBackgroundColor_MouseEnter"
+                        MouseLeave="ClearStatusBar"
+                    />
 
+                </MenuItem>
+                <MenuItem Header="About the developer"
+                    Click="AboutTheDev_Click"
+                    MouseEnter="AboutTheDev_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <MenuItem Header="Close application"
+                    Click="CloseApplication_Click"
+                    MouseEnter="CloseApplication_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+            </Menu>
+            <ToolBar DockPanel.Dock="Top" Height="64">
+                <Button Width ="30" Height ="30" Background="Black"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Red" 
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Orange"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Yellow"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Lime"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Green"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Blue"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="Violet"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button Width ="30" Height ="30" Background="White"
+                    Click="Button_GetBackgroundColor_setGridBackground"
+                    MouseEnter="ChangeBackgroundColor_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                />
+                <Button
+                    Click="AboutTheDev_Click"
+                    MouseEnter="AboutTheDev_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                >
+                    <Image Source="imgs/info.png" />
+                </Button>
+                <Button
+                    Click="CloseApplication_Click"
+                    MouseEnter="CloseApplication_MouseEnter"
+                    MouseLeave="ClearStatusBar"
+                >
+                    <Image Source="imgs/cancel.png"/>
+                </Button>
+            </ToolBar>
+            <StatusBar DockPanel.Dock="Bottom">
+                <TextBlock x:Name="ApplicationStatusBar" Text="..."/>
+            </StatusBar>
+            <Grid>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>
