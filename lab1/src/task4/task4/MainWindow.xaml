@@ -7,6 +7,47 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <InkCanvas x:Name="ink">
 
+        </InkCanvas>
+
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top">
+                <ComboBox
+                    SelectedIndex="3"
+                    Width="100"
+                    Name="ColorsList"
+                    SelectionChanged="ColorsList_SelectionChanged"
+                >
+                    <ComboBoxItem Content="White" Background="White"/>
+                    <ComboBoxItem Content="Black" Background="Black"/>
+                    <ComboBoxItem Content="Red" Background="Red"/>
+                    <ComboBoxItem Content="Orange" Background="Orange"/>
+                    <ComboBoxItem Content="Yellow" Background="Yellow"/>
+                    <ComboBoxItem Content="Lime" Background="Lime"/>
+                    <ComboBoxItem Content="Green" Background="Green"/>
+                    <ComboBoxItem Content="Blue" Background="Blue"/>
+                    <ComboBoxItem Content="Violet" Background="Violet"/>
+                    <ComboBoxItem Content="Purple" Background="Purple"/>
+                </ComboBox>
+                <Slider
+                    Name="ChooseWidth"
+                    ValueChanged="BrushWidthChange"
+                    Width="100"
+                    Minimum="1" Maximum="100" Value="20"
+                    TickPlacement="Both" TickFrequency="25" Foreground="Black"
+                />
+                <RadioButton Click="EraseByPoint">EraseByPoint</RadioButton>
+                <RadioButton Click="EraseByStroke">EraseByStroke</RadioButton>
+                <RadioButton Click="GestureOnly">GestureOnly</RadioButton>
+                <RadioButton Click="Ink">Ink</RadioButton>
+                <RadioButton Click="InkAndGesture">InkAndGesture</RadioButton>
+                <RadioButton Click="None">None</RadioButton>
+                <RadioButton Click="Select">Select</RadioButton>
+            </ToolBar>
+            <Grid>
+
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>
