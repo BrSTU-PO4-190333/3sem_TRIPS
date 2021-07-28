@@ -6,7 +6,52 @@
         xmlns:local="clr-namespace:task2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style
+            TargetType="Ellipse"
+            x:Key="MyEllipseStyle"
+        >
+            <Style.Setters>
+                <Setter Property="Width" Value="48" />
+                <Setter Property="Height" Value="48" />
+                <Setter Property="Margin" Value="8" />
+                <Setter Property="Fill">
+                    <Setter.Value>
+                        <RadialGradientBrush GradientOrigin="0.5, 0.5">
+                            <GradientStop Color="Yellow" Offset="1" />
+                            <GradientStop Color="red" Offset="0" />
+                        </RadialGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="Fill.GradientStops[1].Color"
+                                Duration="0:0:3"
+                                RepeatBehavior="Forever"
+                                AutoReverse="True"
+                            >
+                                <ColorAnimationUsingKeyFrames.KeyFrames>
+                                    <LinearColorKeyFrame KeyTime="0:0:4" Value="Orange" />
+                                    <LinearColorKeyFrame KeyTime="0:0:4" Value="Red" />
+                                </ColorAnimationUsingKeyFrames.KeyFrames>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
-
+        <StackPanel>
+            <Ellipse Style="{StaticResource ResourceKey=MyEllipseStyle}" />
+            <Ellipse Style="{StaticResource ResourceKey=MyEllipseStyle}" />
+            <Ellipse Style="{StaticResource ResourceKey=MyEllipseStyle}" />
+            <Ellipse Style="{StaticResource ResourceKey=MyEllipseStyle}" />
+            <Ellipse Style="{StaticResource ResourceKey=MyEllipseStyle}" />
+        </StackPanel>
     </Grid>
 </Window>
