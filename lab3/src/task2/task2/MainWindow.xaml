@@ -6,7 +6,121 @@
         xmlns:local="clr-namespace:task2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Стили для раскраски Grid в градиент -->
+        <Style TargetType="Grid" x:Key="myGridGradientStyle">
+            <Style.Setters>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Red" Offset="0"/>
+                            <GradientStop Color="Orange" Offset="0.2"/>
+                            <GradientStop Color="Yellow" Offset="0.4"/>
+                            <GradientStop Color="Lime" Offset="0.6"/>
+                            <GradientStop Color="Blue" Offset="0.8"/>
+                            <GradientStop Color="Purple" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <!-- Стили текстового поля -->
+        <Style
+            TargetType="TextBox"
+            x:Key="myTextBoxStyle"
+        >
+            <Style.Setters>
+                <Setter Property="Margin" Value="8 16"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+            </Style.Setters>
+        </Style>
+        <!-- Стили текстового поля (при наведении) -->
+        <Style
+            TargetType="TextBox"
+            x:Key="myTextBoxStyle2"
+        >
+            <Style.Setters>
+                <Setter Property="Margin" Value="2 4"/>
+                <Setter Property="FontSize" Value="32"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid
+            Grid.Column="0"
+            Style="{StaticResource ResourceKey=myGridGradientStyle}"
+        >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox
+                Grid.Row="0"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+            <TextBox
+                Grid.Row="1"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+            <TextBox
+                Grid.Row="2"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+            <TextBox
+                Grid.Row="3"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+        </Grid>
+        <Grid
+            Grid.Column="1"
+            Style="{StaticResource ResourceKey=myGridGradientStyle}"  
+        >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox
+                Grid.Row="0"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+            <TextBox
+                Grid.Row="1"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+            <TextBox
+                Grid.Row="2"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+            <TextBox
+                Grid.Row="3"
+                Style="{StaticResource ResourceKey=myTextBoxStyle}"
+                MouseLeave="TextBox_MouseLeave"
+                MouseEnter="TextBox_MouseEnter"
+            />
+        </Grid>
     </Grid>
 </Window>

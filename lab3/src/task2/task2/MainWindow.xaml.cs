@@ -24,5 +24,15 @@ namespace task2
         {
             InitializeComponent();
         }
+
+        private void TextBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+            (sender as FrameworkElement).Style = (Style)Resources["myTextBoxStyle"];
+        }
+
+        private void TextBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            (sender as FrameworkElement).Style = (Style)Resources["myTextBoxStyle2"];
+        }
     }
 }
