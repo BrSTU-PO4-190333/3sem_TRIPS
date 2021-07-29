@@ -6,7 +6,131 @@
         xmlns:local="clr-namespace:task1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Стили для карточек -->
+        <Style
+            TargetType="Button"
+            x:Key="myCards"
+        >
+            <Style.Setters>
+                <Setter Property="Width" Value="64" />
+                <Setter Property="Height" Value="64" />
+                <Setter Property="Margin" Value="8" />
+                <Setter Property="Content" Value="..." />
+                <Setter Property="Background" Value="Lime" />
+            </Style.Setters>
+        </Style>
+        <!-- Стили для кнопок -->
+        <Style
+            TargetType="Button"
+            x:Key="myButtons"
+        >
+            <Style.Setters>
+                <Setter Property="Margin" Value="8" />
+            </Style.Setters>
+        </Style>
+        <!-- Базовый стиль -->
+        <Style
+            TargetType="Label"
+            x:Key="myLabel"
+        >
+            <Style.Setters>
+                <Setter Property="Margin" Value="8" />
+            </Style.Setters>
+        </Style>
+        <!-- Стиль, который наследует базоввый стиль -->
+        <Style
+            TargetType="Label"
+            x:Key="myActiveLabel"
+            BasedOn="{StaticResource myLabel}"
+        >
+            <Style.Setters>
+                <Setter Property="FontWeight" Value="Bold" />
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
     <Grid>
-
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <Label Content="Последние документы" />
+                <Label Content="1.txt" />
+                <Label Content="2.txt" />
+                <Label Content="3.txt" />
+                <Label Content="4.txt" />
+                <Label Content="5.txt" />
+                <Label Content="6.txt" />
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <WrapPanel>
+                    <Button
+                        Content="Открыть"
+                        Style="{StaticResource ResourceKey=myButtons}"
+                    />
+                    <Button
+                        Content="Сохранить"
+                        Style="{StaticResource ResourceKey=myButtons}"
+                    />
+                    <Button
+                        Content="Закрыть"
+                        Style="{StaticResource ResourceKey=myButtons}"
+                    />
+                    <Button
+                        Content="Обработать"
+                        Style="{StaticResource ResourceKey=myButtons}"
+                    />
+                    <Button
+                        Content="О программе"
+                        Style="{StaticResource ResourceKey=myButtons}"
+                    />
+                </WrapPanel>
+                <WrapPanel>
+                    <Label
+                        Content="1.txt"
+                        Style="{StaticResource ResourceKey=myActiveLabel}"
+                    />
+                    <Label
+                        Content="2.txt"
+                        Style="{StaticResource ResourceKey=myLabel}"
+                    />
+                    <Label
+                        Content="3.txt"
+                        Style="{StaticResource ResourceKey=myLabel}"
+                    />
+                </WrapPanel>
+                <WrapPanel>
+                    <Button
+                        Background="Yellow"
+                        Content="A"
+                        Style="{StaticResource ResourceKey=myCards}"
+                    />
+                    <Button
+                        Background="Red"
+                        Content="B"
+                        Style="{StaticResource ResourceKey=myCards}"
+                    />
+                    <Button
+                        Background="Green"
+                        Content="C"
+                        Style="{StaticResource ResourceKey=myCards}"
+                    />
+                    <Button
+                        Background="Blue"
+                        Content="D"
+                        Style="{StaticResource ResourceKey=myCards}"
+                    />
+                    <Button
+                        Background="Gray"
+                        Content="E"
+                        Style="{StaticResource ResourceKey=myCards}"
+                    />
+                    <Button
+                        Background="LightGray"
+                        Content="F"
+                        Style="{StaticResource ResourceKey=myCards}"
+                    />
+                    <Button Style="{StaticResource ResourceKey=myCards}" />
+                </WrapPanel>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>
