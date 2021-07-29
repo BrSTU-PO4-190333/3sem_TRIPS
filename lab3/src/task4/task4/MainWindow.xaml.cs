@@ -24,5 +24,16 @@ namespace task4
         {
             InitializeComponent();
         }
+
+        private void Button4Clear_Click(object sender, RoutedEventArgs e)
+        {
+            MyTextBox1.Clear();
+            MyTextBox2.Clear();
+        }
+
+        private void Button4Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
