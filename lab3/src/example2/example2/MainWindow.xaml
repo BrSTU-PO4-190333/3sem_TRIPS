@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:example2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <DataTrigger
+                    Binding="{Binding ElementName=slider1, Path=Value}"
+                    Value="0"
+                >
+                    <Setter Property="IsEnabled" Value="False"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel
+        Orientation="Horizontal"
+        VerticalAlignment="Top"
+    >
+        <Button>Открыть</Button>
+        <Button>Обработать</Button>
+        <Slider
+            x:Name="slider1"
+            Width="100"
+            Height="23"
+        />
+    </StackPanel>
 </Window>
