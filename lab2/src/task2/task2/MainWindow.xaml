@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <!--
+            <TextBox
+                x:Name="t1"
+            />
+            <TextBox
+                x:Name="t2"
+                Text="{Binding ElementName=t1, Path=Text}"
+            />
+            <Slider
+                x:Name="slider1"    
+            />
+            <Slider
+                x:Name="slider2"
+                Value="{Binding ElementName=slider1, Path=Value}"
+            />
+            -->
+            <TextBox
+                x:Name="t1"
+                Text="{Binding ElementName=t2, Path=Text}"
+            />
+            <TextBox
+                x:Name="t2"
+                Text="{Binding ElementName=t1, Path=Text}"
+            />
+        </StackPanel>
     </Grid>
 </Window>
