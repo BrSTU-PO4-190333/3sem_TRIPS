@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:task4_example1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Resources>
+        <x:Array x:Key="MyEditingModes" x:Type="{x:Type InkCanvasEditingMode}">
+            <x:Static Member="InkCanvasEditingMode.Ink"/>
+            <x:Static Member="InkCanvasEditingMode.Select"/>
+            <x:Static Member="InkCanvasEditingMode.EraseByPoint"/>
+            <x:Static Member="InkCanvasEditingMode.EraseByStroke"/>
+        </x:Array>
+    </Window.Resources>
+    <StackPanel>
+        <InkCanvas EditingMode="{Binding ElementName=lbEditingModes, Path=SelectedValue}" />
+        <ListBox x:Name="lbEditingModes" ItemsSource="{StaticResource MyEditingModes}" />
+    </StackPanel>
 </Window>
