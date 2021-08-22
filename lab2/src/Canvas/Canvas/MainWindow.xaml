@@ -7,6 +7,42 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Canvas>
+            <Label
+                Canvas.Left="10"
+                Canvas.Top="10"
+                Content="Регистрация пользователя"
+            />
+            <Label
+                Canvas.Left="10"
+                Canvas.Top="40"
+                Content="ФИО"
+            />
+            <TextBox
+                Canvas.Left="70"
+                Canvas.Top="40"
+                Width="200"
+            />
+            <Label
+                Canvas.Left="10"
+                Canvas.Top="70"
+                Content="Email"
+            />
+            <TextBox
+                Canvas.Left="70"
+                Canvas.Top="70"
+                Width="200"
+            />
+            <Label
+                Canvas.Left="50"
+                Canvas.Top="100"
+                Content="Зарегистрироваться"
+            />
+            <Button
+                Canvas.Right="10"
+                Canvas.Bottom="10"
+                Content="Зарегистрироваться"
+            />
+        </Canvas>
     </Grid>
 </Window>
