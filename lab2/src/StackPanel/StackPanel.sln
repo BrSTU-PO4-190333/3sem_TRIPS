@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackPanel", "StackPanel\StackPanel.csproj", "{6E98FF62-DE7D-4D8A-9E6A-57F6C56F9CCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E98FF62-DE7D-4D8A-9E6A-57F6C56F9CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E98FF62-DE7D-4D8A-9E6A-57F6C56F9CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E98FF62-DE7D-4D8A-9E6A-57F6C56F9CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E98FF62-DE7D-4D8A-9E6A-57F6C56F9CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4FC5F4F-4467-4426-9464-67A6A55E8EEF}
+	EndGlobalSection
+EndGlobal
