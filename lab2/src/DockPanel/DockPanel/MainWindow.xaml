@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel LastChildFill="False">
+            <Label
+                DockPanel.Dock="Top"
+                Content="Регистрация пользователя"
+            />
+            <Label
+                DockPanel.Dock="Left"
+                Content="ФИО"
+            />
+            <TextBox
+                DockPanel.Dock="Left"
+                Width="200"
+            />
+            <Label
+                DockPanel.Dock="Right"
+                Content="Email"
+            />
+            <TextBox
+                DockPanel.Dock="Right"
+                Width="200"
+            />
+            <Button
+                DockPanel.Dock="Bottom"
+                Content="Зарегистрироваться"
+            />
+        </DockPanel>
     </Grid>
 </Window>
