@@ -7,6 +7,53 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Slider
+                Minimum="8"
+                Maximum="30"
+                x:Name="SliderFontSize"
+            />
+
+
+
+            <TextBlock
+                FontSize="{Binding ElementName=SliderFontSize, Path=Value}"
+                Text="Текст при верном ElementName и Path"
+            />
+            <!--
+                При верном задании ElementName и Path:
+                Программа запускается.
+                При изменении ползунка Slider изменяется шрифт в TextBlock.
+            -->
+
+
+
+            <TextBlock
+                FontSize="{Binding ElementName=qqqErrorNameqqq, Path=Value}"
+                Text="Текст при неверном ElementName"
+            />
+            <!--
+                При неверном ElementName:
+                Программа запустилась.
+                При изменении ползунка Slider не изменяется шрифт в TextBlock.
+                Output выдаёт сообщение:
+                System.Windows.Data Error: 4 : Cannot find source for binding with reference 'ElementName=qqqErrorNameqqq'. BindingExpression:Path=Value; DataItem=null; target element is 'TextBlock' (Name=''); target property is 'FontSize' (type 'Double')
+            -->
+
+
+
+            <TextBlock
+                FontSize="{Binding ElementName=SliderFontSize, Path=qqqErrorPathqqq}"
+                Text="Текст при неверном Path"
+            />
+            <!--
+                При неверном Path:
+                Программа запустилась.
+                При изменении ползунка Slider не изменяется шрифт в TextBlock.
+                Error List выдаёт сообщение:
+                Severity	Code	Description	Project	File	Line	Suppression State
+                Error	XLS0432	The property 'qqqErrorPathqqq' was not found in type 'Slider'.	VS-WpfApp_3-semestr-TRIPS_lab-2-task-1	MainWindow.xaml	47
+            -->
+        </StackPanel>
     </Grid>
 </Window>
