@@ -7,6 +7,99 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <Label Content="Последние документы" />
+                <Label Content="1.txt" />
+                <Label Content="2.txt" />
+                <Label Content="3.txt" />
+                <Label Content="4.txt" />
+                <Label Content="5.txt" />
+                <Label Content="6.txt" />
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <WrapPanel>
+                    <Button
+                        Content="Открыть"
+                        Margin="8"
+                    />
+                    <Button
+                        Content="Сохранить"
+                        Margin="8"
+                    />
+                    <Button
+                        Content="Закрыть"
+                        Margin="8"
+                    />
+                    <Button
+                        Content="Обработать"
+                        Margin="8"
+                    />
+                    <Button
+                        Content="О программе"
+                        Margin="8"
+                    />
+                </WrapPanel>
+                <WrapPanel>
+                    <Label
+                        Content="1.txt"
+                        Margin="8"
+                        FontWeight="Bold"
+                    />
+                    <Label
+                        Content="2.txt"
+                        Margin="8"
+                    />
+                    <Label
+                        Content="3.txt"
+                        Margin="8"
+                    />
+                </WrapPanel>
+                <WrapPanel>
+                    <Button
+                        Background="Yellow"
+                        Width="64"
+                        Height="64"
+                        Margin="8"
+                        Content="A"
+                    />
+                    <Button
+                        Background="Red"
+                        Width="64"
+                        Height="64"
+                        Margin="8"
+                        Content="B"
+                    />
+                    <Button
+                        Background="Green"
+                        Width="64"
+                        Height="64"
+                        Margin="8"
+                        Content="C"
+                    />
+                    <Button
+                        Background="Blue"
+                        Width="64"
+                        Height="64"
+                        Margin="8"
+                        Content="D"
+                    />
+                    <Button
+                        Background="Gray"
+                        Width="64"
+                        Height="64"
+                        Margin="8"
+                        Content="E"
+                    />
+                    <Button
+                        Background="LightGray"
+                        Width="64"
+                        Height="64"
+                        Margin="8"
+                        Content="F"
+                    />
+                </WrapPanel>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>
