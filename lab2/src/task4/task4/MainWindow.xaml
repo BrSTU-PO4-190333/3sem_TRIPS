@@ -6,7 +6,75 @@
         xmlns:local="clr-namespace:task4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <x:Array x:Key="MyEditingModes" x:Type="{x:Type InkCanvasEditingMode}">
+            <x:Static Member="InkCanvasEditingMode.EraseByPoint" />
+            <x:Static Member="InkCanvasEditingMode.EraseByStroke" />
+            <x:Static Member="InkCanvasEditingMode.GestureOnly" />
+            <x:Static Member="InkCanvasEditingMode.Ink" />
+            <x:Static Member="InkCanvasEditingMode.InkAndGesture" />
+            <x:Static Member="InkCanvasEditingMode.None" />
+            <x:Static Member="InkCanvasEditingMode.Select" />
+        </x:Array>
+        <x:Array x:Key="MyDrawingAttributes" x:Type="{x:Type DrawingAttributes}">
+            <DrawingAttributes Color="White" />
+            <DrawingAttributes Color="Black" />
+            <DrawingAttributes Color="Red" />
+            <DrawingAttributes Color="Orange" />
+            <DrawingAttributes Color="Yellow" />
+            <DrawingAttributes Color="Lime" />
+            <DrawingAttributes Color="Green" />
+            <DrawingAttributes Color="Blue" />
+            <DrawingAttributes Color="Violet" />
+            <DrawingAttributes Color="Purple" />
+        </x:Array>
+    </Window.Resources>
+
     <Grid>
-        
+        <StackPanel>
+            <ToolBar>
+                <WrapPanel>
+                    <ComboBox
+                        x:Name="lbColors"
+                        ItemsSource="{StaticResource MyDrawingAttributes}"
+                        SelectedIndex="3"
+                    >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Color}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Slider
+                        Value="{Binding ElementName=MyInk, Path=DefaultDrawingAttributes.Width}"
+                        Minimum="1"
+                        Maximum="100"
+                        Width="100"
+                        TickFrequency="10"
+                        TickPlacement="Both"
+                        Foreground="Black"
+                    />
+                    <Slider
+                        Value="{Binding ElementName=MyInk, Path=DefaultDrawingAttributes.Height}"
+                        Minimum="1"
+                        Maximum="100"
+                        Width="100"
+                        TickFrequency="10"
+                        TickPlacement="Both"
+                        Foreground="Black"
+                    />
+                    <ComboBox
+                        x:Name="lbEditingModes"
+                        ItemsSource="{StaticResource MyEditingModes}"
+                        SelectedIndex="3"
+                    />
+                </WrapPanel>
+            </ToolBar>
+            <InkCanvas
+                x:Name="MyInk"
+                DefaultDrawingAttributes="{Binding ElementName=lbColors, Path=SelectedValue}"
+                EditingMode="{Binding ElementName=lbEditingModes, Path=SelectedValue}"
+            />
+        </StackPanel>
     </Grid>
 </Window>
