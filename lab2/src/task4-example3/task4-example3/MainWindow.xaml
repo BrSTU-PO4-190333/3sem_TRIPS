@@ -6,7 +6,41 @@
         xmlns:local="clr-namespace:task4_example3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Resources>
+        <x:Array
+            x:Key="MyDrawingAttributes"
+            x:Type="{x:Type DrawingAttributes}"
+        >
+            <DrawingAttributes
+                Color="Red"
+                Width="3"
+                Height="3"
+            />
+            <DrawingAttributes
+                Color="Green"
+                Width="10"
+                Height="10"
+            />
+            <DrawingAttributes
+                Color="Blue"
+                Width="15"
+                Height="15"
+            />
+        </x:Array>
+    </Window.Resources>
+    <StackPanel>
+        <InkCanvas
+            DefaultDrawingAttributes="{Binding ElementName=lbColors, Path=SelectedValue}"
+        />
+        <ListBox
+            x:Name="lbColors"
+            ItemsSource="{StaticResource MyDrawingAttributes}"
+        >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Color}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
 </Window>
